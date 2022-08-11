@@ -13,7 +13,11 @@ public interface UserDAO {
 	public List<User> selectUser();
 	
 	public int insertUser(
-		@Param("userId") String userId
+		@Param("userId") String loginId
 		,@Param("password") String password
 	);
+	
+	public User getUser(@Param("userId") String loginId);
+	
+	public int selectCountLoginId(@Param("userId") String userId);
 }

@@ -18,7 +18,7 @@ public class EncryptUtils {
 			byte[] digest = md.digest();
 			//암호화된 결과를 16진수 문자열로 변환
 			for(int i = 0; i < digest.length; i++) {
-				Integer.toHexString(digest[i] & 0xff);
+				resultData += Integer.toHexString(digest[i] & 0xff);
 			}
 			
 		} catch (NoSuchAlgorithmException e) {
